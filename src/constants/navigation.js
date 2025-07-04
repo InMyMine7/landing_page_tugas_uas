@@ -94,6 +94,7 @@ export const footerLinks = {
   legal: [
       { id: 'hero', label: 'Privacy Policy' },
       { id: 'hero', label: 'Terms of Service' },
+      { id: 'hero', label: 'Download Full Source Code', href: 'https://github.com/InMyMine7/landing_page_tugas_uas' },
   ]
 };
 
