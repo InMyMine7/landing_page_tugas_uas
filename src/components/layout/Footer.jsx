@@ -42,7 +42,7 @@ const Footer = ({ scrollToSection }) => {
         
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-500 text-sm">
-            © 2025 CyberGuard. Dibuat dengan ❤️ oleh Mahasiswa TI Darmajaya.
+            © 2025 CyberShield. Dibuat dengan ❤️ oleh <a href="https://github.com/InMyMine7/landing_page_tugas_uas" target="_blank">Mahasiswa TI Darmajaya</a>.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             {footerLinks.legal.map(link => (
