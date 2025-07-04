@@ -1,0 +1,108 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply bg-slate-900 text-slate-200;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-bg {
+  background-color: #020617;
+  background-image:
+    radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 97% 21%, hsla(195, 98%, 61%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(255, 98%, 61%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(345, 98%, 61%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(225, 98%, 61%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(345, 98%, 61%, 0.1) 0px, transparent 50%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-fuchsia-500 to-cyan-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-fuchsia-400 to-cyan-400;
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-text {
+  text-shadow: 0 0 8px rgba(236, 72, 153, 0.7), 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes security-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(236, 72, 153, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
+}
+
+.security-pulse {
+  animation: security-pulse 2.5s infinite;
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-shine:hover::before {
+  left: 100%;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
